@@ -1,0 +1,13 @@
+---
+
+- hosts: all
+  tasks:
+
+  - name: Update Repo Index
+    apt:
+      update_cache: yes
+
+  - name: Add htop Package
+    apt:
+      name: htop
+      state: present
